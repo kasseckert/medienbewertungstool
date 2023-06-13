@@ -1,3 +1,3 @@
 # Bewertungstool
-## Benutzervrwaltung über Vidis
+## Benutzerverwaltung über Vidis
 https://www.vidis.schule
