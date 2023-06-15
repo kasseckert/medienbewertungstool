@@ -1,9 +1,12 @@
 <?php
 require_once ('sql.inc.php');
 session_start();
-if(!isset($_SESSION["username"])){
-header("Location: login.php");
-exit(); }
+if(!isset($_SESSION['username'])){
+    header("Location: login.php");
+    exit(); 
+} else {
+    $nutzer = $_SESSION['username'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +51,15 @@ exit(); }
                     <label for="art" class="form-label">Art des Projekts</label>
                 </div>
                 <br>
+                
+                <?php
+                    echo $nutzer.'--';
+                    $user = $db_link->query("SELECT * FROM bewertungstool_nutzer WHERE username = '$nutzer'");
+                    while ($zeile = $user->fetch_object()) {
+                        echo $zeile->email;
+                    }
+                ?>
+                
 				<button type="submit" class="btn btn-success" name="submit" id="submit">Projekt anlegen</button>
 			</form>
 
