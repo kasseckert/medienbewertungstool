@@ -9,7 +9,7 @@ $arr = mysqli_fetch_array($eintraege);
 
 $html = '
 <p align="right"><img src="images/logo.png" height="75"></p>
-<h1>Medienprojekt</h1>';
+<h1>Projekt</h1>';
 
 for($i = 0; $i < count($arr); $i++) {
     $html .= '<br>'.$arr[$i];

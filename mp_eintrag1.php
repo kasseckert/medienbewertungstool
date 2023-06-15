@@ -104,7 +104,7 @@ require_once ('mp_projektauswahl.inc.php');
                 <?php
                     $projekte = $db_link->query("SELECT * FROM medienprojekt_daten WHERE passwort=$passwort");
                         while ($zeile_p = $projekte->fetch_object()) {
-                            echo 'Medienprojekt: <b>'.$zeile_p->projektname.'</b>';    
+                            echo 'Projekt: <b>'.$zeile_p->projektname.'</b>';    
                         }
                 ?>
             </h3>

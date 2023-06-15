@@ -83,7 +83,7 @@ require_once ('sql.inc.php');
 				<button type="submit" class="btn btn-success" name="submit" id="submit">Schüler anlegen</button>
 				</form>
             
-            <br><img src="images/medienprojekt.png" height="300">
+            <br><img src="images/projekt.png" height="300">
             <p class="text-primary"><small><span class="material-symbols-outlined">copyright</span> Medienkompetenzteam Realschule Pegnitz</small></p>
 
         </div>
