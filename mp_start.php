@@ -1,5 +1,9 @@
 <?php
-require_once ('../sql.inc.php');
+require_once ('sql.inc.php');
+session_start();
+if(!isset($_SESSION["username"])){
+header("Location: login.php");
+exit(); }
 ?>
 
 <!DOCTYPE html>
@@ -32,12 +36,6 @@ require_once ('../sql.inc.php');
 					<label for="projektname">Bezeichnung für das Projekt</label>
                     <div class="valid-feedback">Die Eingabe ist korrekt.</div>
 				</div>
-				<div class="form-floating mb-3 mt-3">
-					<input type="text" class="form-control" name="passwort" required="required" pattern = "[0-9]{8}">
-					<label for="passwort">Zugangspasswort für das Projekt</label>
-                    <div class="valid-feedback">Die Eingabe ist korrekt.</div>
-                    <div class="invalid-feedback">Bitte füllen Sie dieses Feld aus. <b>Verwenden Sie 8 Ziffern.</b></div>
-				</div>
                 <div class="form-floating">
                     <select class="form-select" id="art" name="art" required="required">
                         <option></option>
@@ -45,7 +43,7 @@ require_once ('../sql.inc.php');
                         <option>Video</option>
                         <option>Podcast</option>
 			            <option>Audioguide</option>
-			     <option>Debatte</option>
+			            <option>Debatte</option>
                     </select>
                     <label for="art" class="form-label">Art des Projekts</label>
                 </div>
@@ -71,7 +69,7 @@ require_once ('../sql.inc.php');
                     <select class="form-select" id="passwort" name="passwort" required="required">
                         <option></option>
                         <?php
-			                $projekte = $db_link->query("SELECT * FROM medienprojekt_daten ORDER BY projektname ASC");
+			                $projekte = $db_link->query("SELECT * FROM bewertungstool_daten ORDER BY projektname ASC");
 			                    while ($zeile_p = $projekte->fetch_object()) {
 				                    echo '<option value="'.$zeile_p->passwort.'">'.$zeile_p->projektname.'</option>';
 			                    }
@@ -83,36 +81,26 @@ require_once ('../sql.inc.php');
 				<button type="submit" class="btn btn-success" name="submit" id="submit">Schüler anlegen</button>
 				</form>
             
-            <br><img src="images/medienprojekt.png" height="300">
+            <br><img src="images/projekt.png" height="300">
             <p class="text-primary"><small><span class="material-symbols-outlined">copyright</span> Medienkompetenzteam Realschule Pegnitz</small></p>
 
         </div>
 
         <div class="col">
-            <h3 class="display-8">3. Projekt bearbeiten</h3>
-                <form action="mp_schritt1.php" method="POST" class="was-validated">
-                    <div class="form-floating mb-3 mt-3">
-                        <input type="text" class="form-control" name="passwort" required="required" pattern = "[0-9]{8}">
-                        <label for="passwort">Zugangspasswort für das Projekt</label>
-                        <div class="valid-feedback">Die Eingabe ist korrekt.</div>
-                        <div class="invalid-feedback">Bitte füllen Sie dieses Feld aus. <b>Verwenden Sie Ihr Zugangspasswort aus 8 Ziffern.</b></div>
-                    </div>
-                    <button type="submit" class="btn btn-warning" name="submit" id="submit">Projekt bearbeiten</button>
-                </form>
-            <br>
-            <p><a href="mp_bewertungsschluessel_pdf.php" class="btn btn-outline-secondary" target="_blank">vorgeschlagener Bewertungsschlüssel</a>
-            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#anleitung">Anleitung</button></p>
-            <br>
-            <br>
 		    <h3 class="display-8">bisherige Projekte</h3>
                 <ul>
                 <?php
-			        $eintraege = $db_link->query("SELECT * FROM medienprojekt_daten ORDER BY projektname ASC");
+			        $eintraege = $db_link->query("SELECT * FROM bewertungstool_daten ORDER BY projektname ASC");
 			            while ($zeile = $eintraege->fetch_object()) {
 				            echo '<li><b> '.$zeile->projektname.'</b> ('.$zeile->art.')</li>';
 			            }
 		        ?>
                 </ul>
+            <p><a href="mp_bewertungsschluessel_pdf.php" class="btn btn-outline-secondary" target="_blank">vorgeschlagener Bewertungsschlüssel</a>
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#anleitung">Anleitung</button> 
+            <a href="logout.php" class="btn btn-danger" target="_blank">abmelden</a></p>
+            <br>
+            <br>
         </div>
     </div>
 </div>
@@ -133,12 +121,6 @@ require_once ('../sql.inc.php');
     und eine eindeutige Kennzeichnung ("Zugangspasswort für das Projekt"), welche aus 8 frei gewählten Ziffern besteht. Das System weist Sie darauf hin,
     ob ggf. ein bereits vergebenes Zugangspasswort vorliegt. Anschließend wird noch die Art des Medienproduktes ausgewählt. Durch diese Auswahl legt man den
     dafür passenden Feedbackbogen fest.<br>
-    <ul>
-    <li><a href="mp_kriterien_video.php">Feedbackkriterien "Video"</a></li>
-    <li><a href="mp_kriterien_praesentation.php">Feedbackkriterien "Präsentation"</a></li>
-    <li><a href="mp_kriterien_audioguide.php">Feedbackkriterien "Audioguide"</a></li>
-    <li><a href="mp_kriterien_podcast.php">Feedbackkriterien "Podcast"</a></li>
-    </ul>
     <br><br>
     <h6>2. Schüler für ein Projekt anlegen</h6>
     Schüler werden pro Projekt angelegt, also auch jeweils einem zuvor angelegten Projekt über die Auswahl "Projekt" zugeordnet. So können Schüler
