@@ -2,10 +2,10 @@
 <html lang="de">
 <?php
 require_once ('mp_audioguide.inc.php');
-require_once ('sql.inc.php');
+require_once ('../sql.inc.php');
 ?>
 <head>
-    <title>Video</title>
+    <title>Audioguide</title>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php

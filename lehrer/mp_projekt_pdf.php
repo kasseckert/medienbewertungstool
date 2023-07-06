@@ -1,33 +1,23 @@
 <?php
-require_once ('sql.inc.php');
-require_once ('tcpdf/tcpdf.php');
+require_once ('../sql.inc.php');
+require_once ('../tcpdf/tcpdf.php');
 
-$id_schueler = (int) ($_GET['id']);
+$id_passwort = (int) ($_GET['passwort']);
 
-$eintraege = $db_link->query("SELECT * FROM medienprojekt_ergebnisse WHERE id=$id_schueler");
-while ($zeile = $eintraege->fetch_object()) {
-    $name = $zeile->name;
-    $vorname = $zeile->vorname; 
-    $item1 = $zeile->item1;
-    $item2 = $zeile->item2;
-    $item3 = $zeile->item3;
-    $item4 = $zeile->item4;
-    $feedback = $zeile->feedback;
-}
-
-$gesamt = $item1 + $item2 + $item3 + $item4;
-
-//$header = '<img src="images/logo.png" height="100">';
-$pdfName = "MP_Feedbackbogen.pdf";
+$eintraege = $db_link->query("SELECT id, vorname, name FROM medienprojekt_ergebnisse WHERE passwort=$id_passwort");
+$arr = mysqli_fetch_array($eintraege);  
 
 $html = '
 <p align="right"><img src="images/logo.png" height="75"></p>
-<h1>Bewertungsbogen</h1>
-<h3>für '.$vorname.' '.$name.'</h3>'.$feedback.'<h3>Gesamt '.$gesamt.'/20 Punkte</h3><p></p><p></p>
-<p>________________________________________<br>
-<small>Unterschrift Lehrkraft</small></p>
-';
+<h1>Projekt</h1>';
 
+for($i = 0; $i < count($arr); $i++) {
+    $html .= '<br>'.$arr[$i];
+}
+
+
+//$header = '<img src="images/logo.png" height="100">';
+$pdfName = "MP_Projekt.pdf";
 
 // Erstellung des PDF Dokuments
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -39,8 +29,8 @@ $pdf->setPrintFooter(false);
 // Dokumenteninformationen
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor($pdfAuthor);
-$pdf->SetTitle('Medienprojekt');
-$pdf->SetSubject('Medienprojekt');
+$pdf->SetTitle('Projekt');
+$pdf->SetSubject('Projekt');
 
 // Header und Footer Informationen
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -61,9 +51,9 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // Schriftart
-$pdf->SetFont('helvetica', '', 10);
+//$pdf->SetFont('helvetica', '', 10);
 // https://www.xml-convert.com/en/convert-tff-font-to-afm-pfa-fpdf-tcpdf
-// $pdf->SetFont('rotis', '', 12);
+$pdf->SetFont('rotis', '', 12);
 
 // Neue Seite
 $pdf->AddPage();

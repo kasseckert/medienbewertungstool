@@ -1,5 +1,5 @@
 <?php
-require_once ('sql.inc.php');
+require_once ('../sql.inc.php');
 $id_passwort = (int) $_POST['passwort'];
 $projekte = $db_link->query("SELECT COUNT(passwort) AS anzahl FROM medienprojekt_daten WHERE passwort = $id_passwort");
 while($zeile = mysqli_fetch_array($projekte)){

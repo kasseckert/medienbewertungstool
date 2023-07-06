@@ -6,7 +6,7 @@ SESSION_START();
 $id_schueler = ($_GET['id']);
 $passwort = (int) ($_GET['passwort']);
 
-require_once ('sql.inc.php');
+require_once ('../sql.inc.php');
 require_once ('mp_projektauswahl.inc.php');
 
 if ( $_POST['submit'] == 'speichern' ){
@@ -41,7 +41,7 @@ if ( $_POST['submit'] == 'speichern' ){
         $feedback .= '<li>'.$_POST['i5b'].'</li> ';
         }
     if ($_POST['i5c'] != '') {
-        $feedback .= '<li>'.$_POST['i5b'].'</li> ';
+        $feedback .= '<li>'.$_POST['i5c'].'</li> ';
         }
     if ($_POST['textitem1'] != '') {
         $feedback .= '<li>'.$_POST['textitem1'].'</li> ';
@@ -79,8 +79,8 @@ if ( $_POST['submit'] == 'speichern' ){
     if ($_POST['p5c'] != '') {
         $feedback .= '<li>'.$_POST['p5c'].'</li> ';
         }
-    if ($_POST['textitem2'] != '') {
-        $feedback .= '<li>'.$_POST['textitem2'].'</li> ';
+    if ($_POST['textitem3'] != '') {
+        $feedback .= '<li>'.$_POST['textitem3'].'</li> ';
         }
     $feedback .= '</ul>';
     $feedback .= '<br><b>'.$g.': '.$_POST['value4'].'/5 Pkt.:</b>';
@@ -115,8 +115,8 @@ if ( $_POST['submit'] == 'speichern' ){
     if ($_POST['g5c'] != '') {
         $feedback .= '<li>'.$_POST['g5c'].'</li> ';
         }
-    if ($_POST['textitem3'] != '') {
-        $feedback .= '<li>'.$_POST['textitem3'].'</li> ';
+    if ($_POST['textitem4'] != '') {
+        $feedback .= '<li>'.$_POST['textitem4'].'</li> ';
         }
     $feedback .= '</ul>';
     $feedback .= '<br><b>'.$c.': '.$_POST['value2'].'/5 Pkt.:</b>';
@@ -151,8 +151,8 @@ if ( $_POST['submit'] == 'speichern' ){
     if ($_POST['c5c'] != '') {
         $feedback .= '<li>'.$_POST['c5c'].'</li> '; 
         }
-    if ($_POST['textitem4'] != '') {
-        $feedback .= '<li>'.$_POST['textitem4'].'</li> ';
+    if ($_POST['textitem2'] != '') {
+        $feedback .= '<li>'.$_POST['textitem2'].'</li> ';
         }
     $feedback .= '</ul>';
     $sql = " UPDATE medienprojekt_ergebnisse ";

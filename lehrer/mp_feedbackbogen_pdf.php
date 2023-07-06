@@ -1,24 +1,33 @@
 <?php
-require_once ('sql.inc.php');
-require_once ('tcpdf/tcpdf.php');
-$id_passwort = (int) ($_GET['passwort']);
+require_once ('../sql.inc.php');
+require_once ('../tcpdf/tcpdf.php');
+
+$id_schueler = (int) ($_GET['id']);
+
+$eintraege = $db_link->query("SELECT * FROM medienprojekt_ergebnisse WHERE id=$id_schueler");
+while ($zeile = $eintraege->fetch_object()) {
+    $name = $zeile->name;
+    $vorname = $zeile->vorname; 
+    $item1 = $zeile->item1;
+    $item2 = $zeile->item2;
+    $item3 = $zeile->item3;
+    $item4 = $zeile->item4;
+    $feedback = $zeile->feedback;
+}
+
+$gesamt = $item1 + $item2 + $item3 + $item4;
 
 //$header = '<img src="images/logo.png" height="100">';
 $pdfName = "MP_Feedbackbogen.pdf";
 
-$eintraege = $db_link->query("SELECT * FROM medienprojekt_ergebnisse WHERE passwort='$id_passwort' ORDER BY name ASC");
+$html = '
+<p align="right"><img src="images/logo.png" height="75"></p>
+<h1>Feedback und -bewertungsbogen</h1>
+<h3>für '.$vorname.' '.$name.'</h3>'.$feedback.'<h3>Gesamt '.$gesamt.'/20 Punkte</h3><p></p><p></p>
+<p>________________________________________<br>
+<small>Unterschrift Lehrkraft</small></p>
+';
 
-$html = '';
-
-while ($zeile = $eintraege->fetch_object()) {
-    $gesamt = $zeile->item1 + $zeile->item2 + $zeile->item3 + $zeile->item4;
-    $html .= '<p align="right"><img src="images/logo.png" height="75"></p>';
-    $html .= '<h1>Feedbackbogen zum Medienprojekt</h1>';
-    $html .= '<h3>für '.$zeile->vorname.' '.$zeile->name.'</h3>'.$zeile->feedback.'<h3>Gesamt '.$gesamt.'/20 Punkte</h3><p></p><p></p>';
-    $html .= '<p>________________________________________<br>';
-    $html .= '<small>Unterschrift Lehrkraft</small></p>';
-    $html .= '<br pagebreak="true" />';
-}
 
 // Erstellung des PDF Dokuments
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -30,8 +39,8 @@ $pdf->setPrintFooter(false);
 // Dokumenteninformationen
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor($pdfAuthor);
-$pdf->SetTitle('Projekt');
-$pdf->SetSubject('Projekt');
+$pdf->SetTitle('Medienprojekt');
+$pdf->SetSubject('Medienprojekt');
 
 // Header und Footer Informationen
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));

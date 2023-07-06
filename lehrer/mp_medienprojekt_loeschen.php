@@ -1,6 +1,6 @@
 <?php
 SESSION_START();
-require_once ('sql.inc.php');
+require_once ('../sql.inc.php');
 $passwort = $_GET['passwort'];
 
 mysqli_query($db_link, "DELETE FROM medienprojekt_daten WHERE passwort = $passwort");

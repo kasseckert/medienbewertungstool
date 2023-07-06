@@ -3,7 +3,7 @@
 
 <?php
 SESSION_START();
-require_once ('sql.inc.php');
+require_once ('../sql.inc.php');
 $id_schueler = ($_GET['id']);
 $passwort = ($_GET['passwort']);
 require_once ('mp_projektauswahl.inc.php');
@@ -14,7 +14,7 @@ require_once ('mp_projektauswahl.inc.php');
         <?php
             $projekte = $db_link->query("SELECT * FROM medienprojekt_daten WHERE passwort=$passwort");
             while ($zeile_p = $projekte->fetch_object()) {
-                echo 'Projekt: '.$zeile_p->projektname;    
+                echo 'Medienprojekt: '.$zeile_p->projektname;    
             }
         ?>
     </title>

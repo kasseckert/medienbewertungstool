@@ -1,5 +1,5 @@
 <?php
-require_once ('sql.inc.php');
+require_once ('../sql.inc.php');
 $sql = " INSERT INTO medienprojekt_ergebnisse (id, name, vorname, passwort) ";
 $sql .= "VALUES (";
 $sql .= "'', '". $_POST['name'] ."', ";

@@ -1,5 +1,6 @@
 <?php
-require_once ('tcpdf/tcpdf.php');
+//require_once ('../sql.inc.php');
+require_once ('../tcpdf/tcpdf.php');
 
 //$header = '<img src="images/logo.png" height="100">';
 $pdfName = "MP_Bewertungsschluessel.pdf";

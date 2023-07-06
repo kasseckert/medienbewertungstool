@@ -1,23 +1,24 @@
 <?php
-require_once ('sql.inc.php');
-require_once ('tcpdf/tcpdf.php');
-
+require_once ('../sql.inc.php');
+require_once ('../tcpdf/tcpdf.php');
 $id_passwort = (int) ($_GET['passwort']);
 
-$eintraege = $db_link->query("SELECT id, vorname, name FROM medienprojekt_ergebnisse WHERE passwort=$id_passwort");
-$arr = mysqli_fetch_array($eintraege);  
-
-$html = '
-<p align="right"><img src="images/logo.png" height="75"></p>
-<h1>Projekt</h1>';
-
-for($i = 0; $i < count($arr); $i++) {
-    $html .= '<br>'.$arr[$i];
-}
-
-
 //$header = '<img src="images/logo.png" height="100">';
-$pdfName = "MP_Projekt.pdf";
+$pdfName = "MP_Feedbackbogen.pdf";
+
+$eintraege = $db_link->query("SELECT * FROM medienprojekt_ergebnisse WHERE passwort='$id_passwort' ORDER BY name ASC");
+
+$html = '';
+
+while ($zeile = $eintraege->fetch_object()) {
+    $gesamt = $zeile->item1 + $zeile->item2 + $zeile->item3 + $zeile->item4;
+    $html .= '<p align="right"><img src="images/logo.png" height="75"></p>';
+    $html .= '<h1>Feedback- und Bewertungsbogen</h1>';
+    $html .= '<h3>für '.$zeile->vorname.' '.$zeile->name.'</h3>'.$zeile->feedback.'<h3>Gesamt '.$gesamt.'/20 Punkte</h3><p></p><p></p>';
+    $html .= '<p>________________________________________<br>';
+    $html .= '<small>Unterschrift Lehrkraft</small></p>';
+    $html .= '<br pagebreak="true" />';
+}
 
 // Erstellung des PDF Dokuments
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -51,9 +52,9 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // Schriftart
-//$pdf->SetFont('helvetica', '', 10);
+$pdf->SetFont('helvetica', '', 10);
 // https://www.xml-convert.com/en/convert-tff-font-to-afm-pfa-fpdf-tcpdf
-$pdf->SetFont('rotis', '', 12);
+// $pdf->SetFont('rotis', '', 12);
 
 // Neue Seite
 $pdf->AddPage();

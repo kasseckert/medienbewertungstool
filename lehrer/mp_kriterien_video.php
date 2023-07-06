@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <?php
-require_once ('mp_praesentation.inc.php');
-require_once ('sql.inc.php');
+require_once ('mp_video.inc.php');
+require_once ('../sql.inc.php');
 ?>
 <head>
     <title>Video</title>
@@ -16,7 +16,7 @@ require_once ('sql.inc.php');
 </head>
     <body>
         <div class="container p-5 my-5 border bg-light">
-        <h3 class="display-5">Kriterien "Präsentation"</h3>
+        <h3 class="display-5">Kriterien "Video"</h3>
             <div class="row">
                 <div class="col p-3 bg-light text-dark border border-primary">
                     <?php

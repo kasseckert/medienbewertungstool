@@ -1,5 +1,5 @@
 <?php
-// Verbalgutachten - Projektart VIDEO
+// Verbalgutachten - Medienprojektart VIDEO
 //
 // i = Inhalt
 $ia = 'Struktur';
@@ -79,7 +79,7 @@ $g1c = 'Die Bearbeitung des Videos ist unzureichend. Durch sie wird der Zuschaue
 // 3 Punkte
 $g3a = 'Die Film- und Audioqualität des Videos ist solide gelungen und verständlich. Der Zuschauer kann dem Film dadurch ordentlich folgen.';
 $g3b = 'Die Kameraführung im Video ist oft stabil. Als Zuschauer konnte man in weiten Teilen dem Film aufmerksam folgen.';
-$gf3c = 'Bei der Bearbeitung zeigen sich ordentliche Ansätze, die den Betrachter unterstützen und Wichtiges hervorheben. Leider konnte dies nicht konsequent Anwendung finden.';
+$g3c = 'Bei der Bearbeitung zeigen sich ordentliche Ansätze, die den Betrachter unterstützen und Wichtiges hervorheben. Leider konnte dies nicht konsequent Anwendung finden.';
 // 5 Punkte
 $g5a = 'Die Ton- und Filmqualität des Videos ist stets klar, wodurch der Zuschauer dem Film leicht folgen kann.';
 $g5b = 'Die Kameraposition ist stets stabil und sicher gewählt, wodurch das Bild nicht verwackelt ist. Dadurch wird es Zuschauern leicht gemacht, sich auf den Inhalt des Videos zu konzentrieren.';

@@ -1,6 +1,6 @@
 <?php
 SESSION_START();
-require_once ('sql.inc.php');
+require_once ('../sql.inc.php');
 $passwort = $_POST['passwort'];
 ?>
 
@@ -23,7 +23,7 @@ $passwort = $_POST['passwort'];
 <div class="container p-5 my-5 border bg-light">
 
     <a href="mp_start.php"><img src="images/logo.png" class="float-end" height="100"></a>
-    <h3 class="display-5">Bewertungstool Projekte</h3>
+    <h3 class="display-5">Bewertungstool</h3>
 	<?php
 		$projekte = $db_link->query("SELECT * FROM medienprojekt_daten WHERE passwort=$passwort");
 
