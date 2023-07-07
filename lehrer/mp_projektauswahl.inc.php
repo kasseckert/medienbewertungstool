@@ -18,6 +18,9 @@ while ($zeile_p = $projekte->fetch_object()) {
     if ($zeile_p->art == 'Audioguide'){
         require_once ('mp_audioguide.inc.php');     
     }
+    if ($zeile_p->art == 'Werken'){
+        require_once ('mp_werken.inc.php');     
+    }
     if ($zeile_p->art == 'Debatte'){
         require_once ('mp_debatte.inc.php');     
     }

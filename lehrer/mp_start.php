@@ -45,6 +45,7 @@ require_once ('../sql.inc.php');
                         <option>Video</option>
                         <option>Podcast</option>
 			            <option>Audioguide</option>
+                        <option>Werken</option>
 			     <option>Debatte</option>
                     </select>
                     <label for="art" class="form-label">Art des Projekts</label>
