@@ -139,6 +139,8 @@ require_once ('../sql.inc.php');
     <li><a href="mp_kriterien_praesentation.php">Feedbackkriterien "Präsentation"</a></li>
     <li><a href="mp_kriterien_audioguide.php">Feedbackkriterien "Audioguide"</a></li>
     <li><a href="mp_kriterien_podcast.php">Feedbackkriterien "Podcast"</a></li>
+    <li><a href="mp_kriterien_debatte.php">Feedbackkriterien "Debatte"</a></li>
+    <li><a href="mp_kriterien_werken.php">Feedbackkriterien "Werken"</a></li>
     </ul>
     <br><br>
     <h6>2. Schüler für ein Projekt anlegen</h6>

@@ -69,15 +69,15 @@ $g = 'Funktion';
 // 0 Punkte
 $g0 = 'Das Ergebnis entspricht leider nicht den Mindestkriterien.';
 // 1 Punkt
-$g1a = 'Das Werkstück entspricht funktionell nur bedingt den Vorgaben.';
+$g1a = 'Das Werkstück entspricht nur bedingt den Vorgaben.';
 $g1b = 'Die Funktion ist nur teilweise gegeben.';
 $g1c = 'Das Werkstück weist Einschränkungen in der Handhabung auf.';
 // 3 Punkte
-$g3a = 'Das Werkstück entspricht funktionell überwiegend den Vorgaben';
+$g3a = 'Das Werkstück entspricht überwiegend den Vorgaben';
 $g3b = 'Die Funktion ist überwiegend gewährleistet.';
 $g3c = 'Das Werkstück lässt sich überwiegend gut handhaben.';
 // 5 Punkte
-$g5a = 'Das Werkstück entspricht funktionell allen Vorgaben.';
+$g5a = 'Das Werkstück entspricht allen Vorgaben.';
 $g5b = 'Die Funktion ist vollumfänglich gewährleistet.';
 $g5c = 'Das Werkstück lässt sich ohne Einschränkung sehr gut handhaben.';
 //
