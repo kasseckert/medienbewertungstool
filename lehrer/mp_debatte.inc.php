@@ -10,13 +10,13 @@ $i1a = 'kennt sich kaum aus';
 $i1b = 'vieles inhaltlich falsch';
 $i1c = 'manches nur zum Teil richtig';
 // 3 Punkte
-$i3a = 'kennst sich aus';
+$i3a = 'kennt sich aus';
 $i3b = 'erfasst den Streitpunkt';
 $i3c = 'bleibt beim Thema, weiß einigermaßen Bescheid';
 // 5 Punkte
 $i5a = 'genau informiert';
 $i5b = 'gut vorbereitet';
-$i5c = 'Detailwissen und kenntnis der Zusammenhänge';
+$i5c = 'Detailwissen und Kenntnis der Zusammenhänge';
 //
 // c = Ausdrucksvermögen
 $c = 'Ausdrucksvermögen';
@@ -24,7 +24,7 @@ $c = 'Ausdrucksvermögen';
 $c0 = 'Das Ergebnis entspricht leider nicht den Mindestkriterien.';
 // 1 Punkt
 $c1a = 'gerade noch verständlich';
-$c1b = 'einigermßen verständlich';
+$c1b = 'einigermaßen verständlich';
 $c1c = 'wenig Regung';
 // 3 Punkte
 $c3a = 'verständlich';
@@ -57,7 +57,7 @@ $g = 'Überzeugungskraft';
 // 0 Punkte
 $g0 = 'Das Ergebnis entspricht leider nicht den Mindestkriterien.';
 // 1 Punkt
-$g1a = 'nur Behauptungen ohen Begründungen';
+$g1a = 'nur Behauptungen ohne Begründungen';
 $g1b = 'kaum Hörerbezug';
 $g1c = 'eigene Rolle wenig glaubwürdig';
 // 3 Punkte
