@@ -24,5 +24,10 @@ while ($zeile_p = $projekte->fetch_object()) {
     if ($zeile_p->art == 'Debatte'){
         require_once ('mp_debatte.inc.php');     
     }
+
+    // Die folgenden drei Zeilen auskommentieren und den Begriff "Beispieltext" ändern.
+    // if ($zeile_p->art == 'Beispieltext'){
+    //     require_once ('mp_beispieltext.inc.php');     
+    // }
 }
 ?>
