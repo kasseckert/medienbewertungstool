@@ -14,7 +14,8 @@ $passwort = $_POST['passwort'];
     <?php
     echo $bootstrap_css;
     echo $bootstrap_js;
-	echo $symbol;
+	echo $bootstrap_icons;
+	//echo $symbol;
     ?>
 </head>
 
@@ -40,8 +41,10 @@ $passwort = $_POST['passwort'];
 				echo '<p class="text-danger">Für das eingegebene Zugangspasswort wurde kein Projekt angelegt oder es wurden noch keine Schüler für das Projekt angelegt.</p>';
 				echo '<p><a href="mp_start.php" class="btn btn-outline-danger">zurück</a></p>';
 			} else {
-				echo '<p><a href="mp_feedbackbogen_alle_pdf.php?passwort='.$passwort.'" target="_blank">';
-				echo '<span class="material-symbols-outlined">verified</span></a>';
+				echo '<p><a href="mp_punkteliste_pdf.php?passwort='.$passwort.'" target="_blank">';
+				echo '<i class="bi bi-card-list"></i></a> Punkteliste<br>';
+				echo '<a href="mp_feedbackbogen_alle_pdf.php?passwort='.$passwort.'" target="_blank">';
+				echo '<i class="bi bi-patch-check"></i></a>';
 				if ($anzahl_datensaetze == 1) {
 					echo ' '.$anzahl_datensaetze.' Feedbackbogen ausdrucken<br>';
 				} else {
@@ -53,19 +56,19 @@ $passwort = $_POST['passwort'];
 				echo '<p class="text-bg-primary"><b>&emsp;'.$zeile->name.' '.$zeile->vorname.'</b></p>';
 				if ($zeile->feedback !=""){
 					$gesamt = $zeile->item1 + $zeile->item2 + $zeile->item3 + $zeile->item4;
-					echo '<a href="mp_feedbackbogen_pdf.php?id='.$zeile->id.'" target="_blank"><span class="material-symbols-outlined">verified</span></a> ';
+					echo '<a href="mp_feedbackbogen_pdf.php?id='.$zeile->id.'" target="_blank"><i class="bi bi-patch-check"></i></a> ';
 					echo '<b>Gesamtpunktzahl: '.$gesamt.'</b><br>';
-					echo '<p class="text-secondary"><a href="mp_eintrag1.php?id='.$zeile->id.'&passwort='.$zeile->passwort.'"><span class="material-symbols-outlined">add_notes</span></a> <small>Medienprojekt nochmal bewerten</small></p>';
+					echo '<p class="text-secondary"><a href="mp_eintrag1.php?id='.$zeile->id.'&passwort='.$zeile->passwort.'"><i class="bi bi-journal-check"></i></a> <small>Projekt nochmal bewerten</small></p>';
 					echo '<br>';
 				} else {
 					echo '<p class="text-secondary">Es liegt noch keine Bewertung vor.</p>';
-					echo '<p class="text-secondary"><a href="mp_eintrag1.php?id='.$zeile->id.'&passwort='.$zeile->passwort.'"><span class="material-symbols-outlined">add_notes</span></a> <small>Medienprojekt bewerten</small></p>';
+					echo '<p class="text-secondary"><a href="mp_eintrag1.php?id='.$zeile->id.'&passwort='.$zeile->passwort.'"><i class="bi bi-journal-check"></i></a> <small>Projekt bewerten</small></p>';
 				}
 				echo '<br><br>';
 			}
 
 			if ($anzahl_datensaetze > 0) {
-				echo '<p class="text-danger"><a href="mp_medienprojekt_loeschen.php?passwort='.$passwort.'"><span class="material-symbols-outlined">delete_forever</span></a> <b>VORSICHT: </b>Medienprojekt wird endgültig gelöscht!</p>';
+				echo '<p class="text-danger"><a href="mp_medienprojekt_loeschen.php?passwort='.$passwort.'"><i class="bi bi-trash3"></i></a> <b>VORSICHT: </b>Projekt wird endgültig gelöscht!</p>';
 			}
 		?>
 	</div>
