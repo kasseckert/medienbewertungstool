@@ -153,18 +153,18 @@ require_once ('../sql.inc.php');
     <br><br>
     <h5>Projekt bewerten</h5>
     <h6>Feedbackbogen ausfüllen</h6>
-    Über das Symbol <span class="material-symbols-outlined">add_notes</span> (Projekt bewerten/Projekt nochmal bewerten) gelangt man zum Feedbackbogen. 
+    Über das Symbol <i class="bi bi-journal-check"></i> (Projekt bewerten/Projekt nochmal bewerten) gelangt man zum Feedbackbogen. 
     Für die vier Kriterien "Inhalt", "Fachliche Korrektheit" und den beiden jeweils medientypischen Bereichen kann man jeweils 0 bis 5 Punkte vergeben. 
     Je nach Punktauswahl erscheinen mögliche Textbausteine für das Feedback. <b>Bei den Punktzahlen 2 und 4 erscheinen die Textbausteine der benachbarten 
     Punktzahlen. In diesem Fall muss aus jeder Punktekategorie wenigstens ein Textbaustein gewählt werden.</b> Des Weiteren kann im Textfeld "Sonstiges" auch eigener 
     Text eingetragen werden.
     <br><br>
     <h6>Feedbackbögen erhalten</h6>
-    Über das Symbol <span class="material-symbols-outlined">verified</span> können die Feedbackbögen pro Schüler oder als kompletter Klassensatz ausgedruckt werden.<br>
+    Über das Symbol <i class="bi bi-patch-check"></i> können die Feedbackbögen pro Schüler oder als kompletter Klassensatz ausgedruckt werden.<br>
     Ein möglicher Bewertungsschlüssel ist auf der Startseite des Bewertungstools hinterlegt. Dieser ist bestenfalls empfohlen, aber nicht verpflichtend.
     <br><br>
     <h6>Projekt löschen</h6>
-    Über das Symbol <span class="material-symbols-outlined">delete_forever</span> kann das eigene Projekt nach Abschluss wieder gelöscht werden. Es ist 
+    Über das Symbol <i class="bi bi-trash3"></i> kann das eigene Projekt nach Abschluss wieder gelöscht werden. Es ist 
     aber Vorsicht angebracht, da in diesem Fall das Projekt unwiederbringlich gelöscht wird. Eine Wiederherstellung ist nicht möglich.
     </div>
 </body>
