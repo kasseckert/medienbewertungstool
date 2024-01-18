@@ -12,7 +12,7 @@ require_once ('../sql.inc.php');
     <?php
     echo $bootstrap_css;
     echo $bootstrap_js;
-	echo $symbol;
+	echo $bootstrap_icons;
     ?>
 </head>
 
