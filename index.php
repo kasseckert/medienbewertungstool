@@ -13,6 +13,10 @@ require_once ('sql.inc.php');
     echo $bootstrap_css;
     echo $bootstrap_js;
 	echo $symbol;
+    // LOGO
+    // https://pixabay.com/de/vectors/logo-origami-vogel-fliegen-blau-1913689/
+    //
+    
     ?>
 </head>
 

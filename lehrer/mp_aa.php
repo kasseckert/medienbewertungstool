@@ -144,7 +144,7 @@
 
 <body>
 <div class="container p-5 my-5 border bg-light">
-    <a href="index.php"><img src="images/logo.png" class="float-end" height="75"></a>
+    <a href="../index.php"><img src="images/logo.png" class="float-end" height="75"></a>
     <h3 class="display-5">Bewertungstool (Aufgabengenerator)</h3>
     <p></p>
 
