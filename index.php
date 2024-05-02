@@ -12,7 +12,7 @@ require_once ('sql.inc.php');
     <?php
     echo $bootstrap_css;
     echo $bootstrap_js;
-	echo $symbol;
+	echo $bootstrap_icons;
     // LOGO
     // https://pixabay.com/de/vectors/logo-origami-vogel-fliegen-blau-1913689/
     //
@@ -30,6 +30,7 @@ require_once ('sql.inc.php');
         <h3 class="display-5">Aufgabengenerator</h3>
         <p>Jedes Ergebnis einer Aufgabe zur Medienproduktion kann auch durch eine KI erzeugt werden. Im Zentrum einer Bewertung eines Medienprojektes ist daher die Prozessbeschreibung. Es gilt, den Lerngegenstand exakt zu definieren, um daraus in Bezug auf die Rahmenbedingungen, die Formulierung und die Bewertung mithilfe des Bewertungstools konkrete Gestaltungsansätze auszuwählen.</p>
         <p></p><a href="lehrer/mp_aa.php" class="btn btn-outline-success">weiter</a></p>
+        <h1 class="float-end"><a href="https://github.com/kasseckert/medienbewertungstool"><i class="bi bi-github"></i></a></h1><br>
     </div>
 </body>
 </html>

@@ -34,7 +34,7 @@ $passwort = $_POST['passwort'];
 	?>
     <br>
 		<?php
-			$eintraege = $db_link->query("SELECT * FROM medienprojekt_ergebnisse WHERE passwort='$passwort' ORDER BY name ASC");
+			$eintraege = $db_link->query("SELECT * FROM medienprojekt_ergebnisse WHERE passwort='$passwort' ORDER BY id ASC");
 			
 			$anzahl_datensaetze = $eintraege->num_rows;
 			if ($anzahl_datensaetze == 0) {

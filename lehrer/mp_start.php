@@ -82,8 +82,48 @@ require_once ('../sql.inc.php');
                 </div>
                 <br>
 				<button type="submit" class="btn btn-success" name="submit" id="submit">Schüler anlegen</button>
-				</form>
+			</form>
             
+            <br>
+            <h3 class="display-8">2. oder eine ganze Klasse für ein Projekt anlegen</h3>
+
+            <form action="mp_klasse_anlegen.php" method="POST">
+                <div class="form-floating">
+                    <select class="form-select" id="passwort" name="passwort" required="required">
+                        <option></option>
+                        <?php
+			                $projekte2 = $db_link->query("SELECT * FROM medienprojekt_daten ORDER BY projektname ASC");
+			                    while ($zeile_p2 = $projekte2->fetch_object()) {
+				                    echo '<option value="'.$zeile_p2->passwort.'">'.$zeile_p2->projektname.'</option>';
+			                    }
+		                ?>
+                    </select>
+                    <label for="passwort" class="form-label">Projekt</label>
+                </div>
+                <br>
+                <div class="form-floating">
+                    <select class="form-select" id="klasse" name="klasse" required="required">
+                        <option></option>
+                        <option value="20">20 Schüler in der Klasse</option>
+                        <option value="21">21 Schüler in der Klasse</option>
+                        <option value="22">22 Schüler in der Klasse</option>
+                        <option value="23">23 Schüler in der Klasse</option>
+                        <option value="24">24 Schüler in der Klasse</option>
+                        <option value="25">25 Schüler in der Klasse</option>
+                        <option value="26">26 Schüler in der Klasse</option>
+                        <option value="27">27 Schüler in der Klasse</option>
+                        <option value="28">28 Schüler in der Klasse</option>
+                        <option value="29">29 Schüler in der Klasse</option>
+                        <option value="30">30 Schüler in der Klasse</option>
+                        <option value="31">31 Schüler in der Klasse</option>
+                        <option value="32">32 Schüler in der Klasse</option>
+                    </select>
+                    <label for="klasse" class="form-label">Anzahl der Schüler in deiner Klasse</label>
+                </div>
+                <br>
+				<button type="submit" class="btn btn-success" name="submit" id="submit">ganze Klasse anlegen</button>
+			</form>
+
             <br><img src="images/medienprojekt.png" height="300">
             <p class="text-primary"><small><span class="material-symbols-outlined">copyright</span> Medienkompetenzteam Realschule Pegnitz</small></p>
 
