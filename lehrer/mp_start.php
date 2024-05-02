@@ -125,7 +125,7 @@ require_once ('../sql.inc.php');
 			</form>
 
             <br>
-            <p class="text-primary"><small><span class="material-symbols-outlined">copyright</span> Medienkompetenzteam Realschule Pegnitz</small></p>
+            <p class="text-primary"><small><i class="bi bi-c-circle"></i> Medienkompetenzteam Realschule Pegnitz</small></p>
 
         </div>
 
