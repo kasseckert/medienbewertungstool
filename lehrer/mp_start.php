@@ -85,7 +85,7 @@ require_once ('../sql.inc.php');
 			</form>
             
             <br>
-            <h3 class="display-8">2. oder eine ganze Klasse für ein Projekt anlegen</h3>
+            <h3 class="display-8">2. oder Klassenliste für ein Projekt anlegen</h3>
 
             <form action="mp_klasse_anlegen.php" method="POST">
                 <div class="form-floating">
@@ -124,7 +124,7 @@ require_once ('../sql.inc.php');
 				<button type="submit" class="btn btn-success" name="submit" id="submit">ganze Klasse anlegen</button>
 			</form>
 
-            <br><img src="images/medienprojekt.png" height="300">
+            <br>
             <p class="text-primary"><small><span class="material-symbols-outlined">copyright</span> Medienkompetenzteam Realschule Pegnitz</small></p>
 
         </div>
