@@ -38,9 +38,9 @@
         // Wie kommt man zum Ergebnis?
         $prozess1 = 'Quellenangaben';
         // zus. Wie wird das Ergebnis inhaltlich geprüft
-        $prozess2 = 'Quellenangaben + fachliche Überprüfung';
+        $prozess2 = 'Quellenangaben + inhaltliche Überprüfung';
         // zus. Wie wird das Ergebnis mit der gestellten Anforderung abgeglichen?
-        $prozess3 = 'Quellenangaben + fachliche Überprüfung + Abgleich mit Aufgabenstellung';
+        $prozess3 = 'Quellenangaben + inhaltliche Überprüfung + Abgleich mit Aufgabenstellung';
         // Formulierung in der Aufgabenstellung
         $prozess1_value = 'Belege deine Quellen. Gib bei Internetseiten den vollständigen Link an, bei KI-Abfragen den kompletten Prompt.';
         $prozess2_value = 'Lege ausführlich dar, wie du deine Ergebnisse auf die inhaltliche Korrektheit geprüft hast.';
@@ -144,7 +144,7 @@
 
 <body>
 <div class="container p-5 my-5 border bg-light">
-    <a href="../index.php"><img src="images/logo.png" class="float-end" height="75"></a>
+    <a href="index.php"><img src="images/logo.png" class="float-end" height="75"></a>
     <h3 class="display-5">Bewertungstool (Aufgabengenerator)</h3>
     <p></p>
 
@@ -185,7 +185,8 @@
 					<label for="thema">Thema des Medienprojektes</label>
 				</div>
 				
-                <h5>Art des Wissens (Kompetenzniveau)</h5>
+                <h5>Art des Wissens (Kompetenzniveau) <small><a href="https://swrs.de/wp-content/uploads/2020/01/Geheft_fertig.pdf" target="_blank" title="Operatoren (Realschule Wunsiedel; Lesekompetenz)"><i class="bi bi-info-circle"></i></a></small></h5>
+                
                 <h6>1. Teilaufgabe (obligatorisch)</h6>
                 <div class="form-floating">
                     <select class="form-select" id="wissen" name="wissen" required="required" data-bs-toggle="tooltip" title="<?php echo $info1; ?>" data-bs-placement="right" onchange="toggleTextDisplay1()">
