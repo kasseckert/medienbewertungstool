@@ -6,7 +6,7 @@ $id_passwort = (int) ($_GET['passwort']);
 //$header = '<img src="images/logo.png" height="100">';
 $pdfName = "MP_Feedbackbogen.pdf";
 
-$eintraege = $db_link->query("SELECT * FROM medienprojekt_ergebnisse WHERE passwort='$id_passwort' ORDER BY name ASC");
+$eintraege = $db_link->query("SELECT * FROM medienprojekt_ergebnisse WHERE passwort='$id_passwort' ORDER BY id ASC");
 
 $html = '';
 
@@ -14,7 +14,7 @@ while ($zeile = $eintraege->fetch_object()) {
     $gesamt = $zeile->item1 + $zeile->item2 + $zeile->item3 + $zeile->item4;
     $html .= '<p align="right"><img src="images/logo.png" height="75"></p>';
     $html .= '<h1>Feedback- und Bewertungsbogen</h1>';
-    $html .= '<h3>für '.$zeile->vorname.' '.$zeile->name.'</h3>'.$zeile->feedback.'<h3>Gesamt '.$gesamt.'/20 Punkte</h3><p></p><p></p>';
+    $html .= '<h3>für ______________________ ('.$zeile->vorname.')</h3>'.$zeile->feedback.'<h3>Gesamt '.$gesamt.'/20 Punkte</h3><p></p><p></p>';
     $html .= '<p>________________________________________<br>';
     $html .= '<small>Unterschrift Lehrkraft</small></p>';
     $html .= '<br pagebreak="true" />';

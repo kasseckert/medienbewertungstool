@@ -23,7 +23,7 @@ $pdfName = "MP_Feedbackbogen.pdf";
 $html = '
 <p align="right"><img src="images/logo.png" height="75"></p>
 <h1>Feedback und -bewertungsbogen</h1>
-<h3>für '.$vorname.' '.$name.'</h3>'.$feedback.'<h3>Gesamt '.$gesamt.'/20 Punkte</h3><p></p><p></p>
+<h3>für ______________________ ('.$vorname.')</h3>'.$feedback.'<h3>Gesamt '.$gesamt.'/20 Punkte</h3><p></p><p></p>
 <p>________________________________________<br>
 <small>Unterschrift Lehrkraft</small></p>
 ';
