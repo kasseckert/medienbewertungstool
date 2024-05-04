@@ -60,7 +60,7 @@
     // 5 Punkte
     $p5a = 'Dem Gegenüber wird aufmerksam zugehört.';
     $p5b = 'Die Gedanken der Anderen werden sinnvoll weitergeführt.';
-    $p5c = 'Zu jeder Zeit werden alle Argument und Inhalte im Blick gehalten.';
+    $p5c = 'Zu jeder Zeit werden alle Argumente und Inhalte im Blick gehalten.';
     //
     // g = Ausdrucksvermögen
     // ga = Ausdrucksweise
