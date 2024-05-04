@@ -51,7 +51,7 @@
     $p0 = 'Das Ergebnis entspricht leider nicht den Mindestkriterien.';
     // 1 Punkt
     $p1a = 'Dem Gegenüber wird nur wenig zugehört.';
-    $p1b = 'Das Ergebnis entspricht leider nicht den Mindestkriterien.';
+    $p1b = 'Auf die Inhalte der Anderen wird nur bedingt eingegangen.';
     $p1c = 'Es wird kaum mit den Gesprächspartnern geredet.';
     // 3 Punkte
     $p3a = 'Dem Gegenüber wird meist zugehört.';
