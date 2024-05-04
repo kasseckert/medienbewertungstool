@@ -185,7 +185,7 @@ require_once ('../sql.inc.php');
     <br><br>
     <h6>2. Schüler für ein Projekt anlegen</h6>
     Schüler werden pro Projekt angelegt, also auch jeweils einem zuvor angelegten Projekt über die Auswahl "Projekt" zugeordnet. So können Schüler
-    auch Projekte durchlaufen.
+    auch mehrere Projekte durchlaufen. Ebenso kann ein anonymisierter Klassensatz erzeugt werden.
     <br><br>
     <h6>3. Projekt bearbeiten</h6>
     Um nun anschließend die Leistung der Schüler bewerten zu können, gibt man die Kennzeichnung ("Zugangspasswort für das Projekt") ein, um zu seinem 
