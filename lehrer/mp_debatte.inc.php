@@ -16,10 +16,10 @@
     // 3 Punkte
     $i3a = 'Der eigene Informationsstand ist weitgehend ausreichend.';
     $i3b = 'Viele vorgebrachte Aspekte sind zum Teil richtig.';
-    $i3c = 'Die vorgebrachten Aspekte überzeugen durch umfassendes Detailwissen.';
+    $i3c = 'Die gefragte Maßnahme wird genau bestimmt.';
     // 5 Punkte
     $i5a = 'Der eigene Informationsstand ist überzeugend.';
-    $i5b = 'Die gefragte Maßnahme wird genau bestimmt.';
+    $i5b = 'Die vorgebrachten Aspekte überzeugen durch umfassendes Detailwissen.';
     $i5c = 'Die Kenntnis der Zusammenhänge ist beeindruckend.';
     //
     // c = Überzeugungskraft
