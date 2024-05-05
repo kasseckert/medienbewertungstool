@@ -38,7 +38,16 @@ require_once ('sql.inc.php');
                         <h3 class="display-8">Bewertungstool</h3>
                     </div>
                     <div class="card-body bg-white text-dark">
-                        <p>Das Werkzeug stellt eine Beispielanwendung dar. Es ist nicht geeignet für eine datenschutzkonforme Speicherung personenbezogener Daten, ein anoymisiertes Arbeit ist möglich.</p>
+                        <p>Das Werkzeug stellt eine Beispielanwendung dar. Es ist nicht geeignet für eine datenschutzkonforme Speicherung personenbezogener Daten, ein anoymisiertes Arbeit ist möglich.<br>Aktuell gibt es Feedbackbögen für:</p>
+                        <ul>
+                            <li><a href="lehrer/mp_kriterien_video.php" target="_blank">Feedbackkriterien "Video"</a></li>
+                            <li><a href="lehrer/mp_kriterien_praesentation.php" target="_blank">Feedbackkriterien "Präsentation"</a></li>
+                            <li><a href="lehrer/mp_kriterien_audioguide.php" target="_blank">Feedbackkriterien "Audioguide"</a></li>
+                            <li><a href="lehrer/mp_kriterien_podcast.php" target="_blank">Feedbackkriterien "Podcast"</a></li>
+                            <li><a href="lehrer/mp_kriterien_debatte.php" target="_blank">Feedbackkriterien "Debatte"</a></li>
+                            <li><a href="lehrer/mp_kriterien_werken.php" target="_blank">Feedbackkriterien "Werken"</a></li>
+                            <li><a href="lehrer/mp_kriterien_ebook.php" target="_blank">Feedbackkriterien "eBook"</a></li>
+                        </ul>
                     </div>
                     <div class="card-footer bg-white text-dark">
                         <p><a href="lehrer/mp_start.php" class="btn btn-outline-primary">weiter</a></p>

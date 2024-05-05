@@ -24,5 +24,8 @@ while ($zeile_p = $projekte->fetch_object()) {
     if ($zeile_p->art == 'Debatte'){
         require_once ('mp_debatte.inc.php');     
     }
+    if ($zeile_p->art == 'eBook'){
+        require_once ('mp_ebook.inc.php');     
+    }
 }
 ?>

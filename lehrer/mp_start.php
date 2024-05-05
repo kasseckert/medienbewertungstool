@@ -46,7 +46,8 @@ require_once ('../sql.inc.php');
                         <option>Podcast</option>
 			            <option>Audioguide</option>
                         <option>Werken</option>
-			     <option>Debatte</option>
+			            <option>Debatte</option>
+                        <option>eBook</option>
                     </select>
                     <label for="art" class="form-label">Art des Projekts</label>
                 </div>
@@ -181,6 +182,7 @@ require_once ('../sql.inc.php');
     <li><a href="mp_kriterien_podcast.php">Feedbackkriterien "Podcast"</a></li>
     <li><a href="mp_kriterien_debatte.php">Feedbackkriterien "Debatte"</a></li>
     <li><a href="mp_kriterien_werken.php">Feedbackkriterien "Werken"</a></li>
+    <li><a href="mp_kriterien_ebook.php">Feedbackkriterien "eBook"</a></li>
     </ul>
     <br><br>
     <h6>2. Schüler für ein Projekt anlegen</h6>
