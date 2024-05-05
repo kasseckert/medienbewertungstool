@@ -50,15 +50,15 @@ $p = 'Gestaltung & Anschaulichkeit';
 $p0 = 'Das Ergebnis entspricht leider nicht den Mindestkriterien.';
 // 1 Punkt
 $p1a = 'kaum Visualisierungselemente enthalten; überladene Schaubilder';
-$p1b = 'unglücklich gewählter Zeitpunkt; keinerlei Medieneinsatz; kaum Vorbereitung';
+$p1b = 'unglücklich gewähltes Timing; keinerlei Medieneinsatz; kaum Vorbereitung';
 $p1c = 'Die Darstellungsform ist verwirrend und ungenau';
 // 3 Punkte
 $p3a = 'Grafiken/Schaubilder/Tabellen mit angemessener Aussagekraft';
-$p3b = 'Zeitpunkt nachvollziehbar gewählt; angemessener Technikeinsatz';
+$p3b = 'Timing ist nachvollziehbar; angemessener Technikeinsatz';
 $p3c = 'Die Darstellungsform ist präzise und verständlich';
 // 5 Punkte
 $p5a = 'aussagekräftige Grafiken/Schaubilder; übersichtliche Tabellen';
-$p5b = 'richtiger Zeitpunkt; routinierter Technikeinsatz';
+$p5b = 'richtiges Timing; routinierter Technikeinsatz';
 $p5c = 'Die Darstellungsform ist präzise, und gut verständlich';
 //
 // g = Technische Umsetzung
