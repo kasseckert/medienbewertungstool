@@ -39,12 +39,12 @@ require_once ('sql.inc.php');
                     </div>
                     <div class="card-body bg-white text-dark">
                         <p>Das Werkzeug stellt eine Beispielanwendung dar. Es ist nicht geeignet für eine datenschutzkonforme Speicherung personenbezogener Daten, ein anoymisiertes Arbeit ist möglich.<br>Aktuell gibt es Feedbackbögen für:</p>
-                        <p><a href="lehrer/mp_kriterien_video.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Video"</a> 
-                            <a href="lehrer/mp_kriterien_praesentation.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Präsentation"</a></p>
-                        <p><a href="lehrer/mp_kriterien_audioguide.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Audioguide"</a> 
-                            <a href="lehrer/mp_kriterien_podcast.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Podcast"</a></p>
-                        <p><a href="lehrer/mp_kriterien_debatte.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Debatte"</a> 
-                            <a href="lehrer/mp_kriterien_werken.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Werken"</a></p>
+                        <p><a href="lehrer/mp_kriterien_video.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Video"</a></p>
+                        <p><a href="lehrer/mp_kriterien_praesentation.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Präsentation"</a></p>
+                        <p><a href="lehrer/mp_kriterien_audioguide.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Audioguide"</a></p> 
+                        <p><a href="lehrer/mp_kriterien_podcast.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Podcast"</a></p>
+                        <p><a href="lehrer/mp_kriterien_debatte.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Debatte"</a></p> 
+                        <p><a href="lehrer/mp_kriterien_werken.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "Werken"</a></p>
                         <p><a href="lehrer/mp_kriterien_ebook.php" target="_blank" class="btn btn-outline-secondary btn-sm">Feedbackkriterien "eBook"</a></p>
                     </div>
                     <div class="card-footer bg-white text-dark">
