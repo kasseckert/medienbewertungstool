@@ -19,11 +19,13 @@
         $medienprodukt2 = 'Video';
         $medienprodukt3 = 'Podcast';
         $medienprodukt4 = 'Audioguide';
+        $medienprodukt5 = 'eBook';
         // Formulierung in der Aufgabenstellung
         $medienprodukt1_value = 'eine Präsentation';
         $medienprodukt2_value = 'ein Video';
         $medienprodukt3_value = 'einen Podcast';
         $medienprodukt4_value = 'einen Audioguide';
+        $medienprodukt5_value = 'ein eBook';
     // Art des Wissens (Kompetenz)
         // Auswahl im Formular
         $wissen1 = 'Faktenwissen (Schwierigkeitsgrad leicht)';
@@ -70,7 +72,7 @@
             $ausgabe .= '<li>'.$_POST['teilaufgabe3'].'</li>';
         }
         $ausgabe .= '</ul>';
-        $ausgabe .= 'Der zeitliche Gesamtumfang deines Medienproduktes sollte in etwa '.$_POST['umfang'].' Minuten entsprechen.<br>';
+        $ausgabe .= 'Der Gesamtumfang deines Medienproduktes sollte in etwa '.$_POST['umfang'].' Minuten/Seiten entsprechen.<br>';
         $opt1 = 'opt1';
         if ($_POST['prozess'] == $opt1) {
             $ausgabe .=  $prozessbericht.' '.$prozess1_value.'<br>';
@@ -109,8 +111,11 @@
         } elseif ($_POST['medienprodukt'] == $medienprodukt3_value) {
             require_once ('mp_podcast.inc.php');
             $ausgabe .= $p;
-        } else {
+        } elseif ($_POST['medienprodukt'] == $medienprodukt4_value) {
             require_once ('mp_audioguide.inc.php');
+            $ausgabe .= $p;
+        } else {
+            require_once ('mp_ebook.inc.php');
             $ausgabe .= $p;
         }
         $ausgabe .= ' und der technischen Umsetzung vor allem der zu erstellende Prozessbericht sein (= Bewertungskriterien für Inhalt und fachliche Richtigkeit).';
@@ -171,13 +176,14 @@
                         <option value="<?php echo $medienprodukt2_value; ?>"><?php echo $medienprodukt2; ?></option>
                         <option value="<?php echo $medienprodukt3_value; ?>"><?php echo $medienprodukt3; ?></option>
                         <option value="<?php echo $medienprodukt4_value; ?>"><?php echo $medienprodukt4; ?></option>
+                        <option value="<?php echo $medienprodukt5_value; ?>"><?php echo $medienprodukt5; ?></option>
                     </select>
                     <label for="art" class="form-label">Art des Medienproduktes</label>
                 </div>
 
                 <div class="form-floating mb-3 mt-3">
                     <input type="text" class="form-control" name="umfang" id="umfang" required="required">
-                    <label for="umfang">Zeitumfang (Dauer) des Medienproduktes in Minuten</label>
+                    <label for="umfang">Zeitumfang (Minuten) bzw. Umfang (Seiten) des Medienproduktes</label>
                 </div>
                 
                 <div class="form-floating mb-3 mt-3">
