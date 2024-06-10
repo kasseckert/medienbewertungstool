@@ -26,7 +26,7 @@
     // ca = Aufstellung von Thesen
     // cb = Begründungen
     // cc = eigener Standpunkt
-    $c = 'Ausdrucksvermögen';
+    $c = 'Argumentationsaufbau';
     // 0 Punkte
     $c0 = 'Das Ergebnis entspricht leider nicht den Mindestkriterien.';
     // 1 Punkt
